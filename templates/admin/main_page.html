@@ -1,0 +1,38 @@
+{% extends "admin_base.html" %}
+
+{% block meta %}
+<link rel="stylesheet" href='{{ url_for("static", filename="/styles/null.css") }}'>
+{% endblock %}
+
+{% block content %}
+    <content>
+        <table>
+            <h1>Пользователи</h1>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>e-mail</th>
+                <th>Пароль</th>
+                <th>Последний IP</th>
+                <th>IP регистрации</th>
+                <th>Последняя активность</th>
+                <th>Реферальный код</th>
+                <th>Админ?</th>
+            </tr>
+            {% for user in user_list %}
+            <tr>
+                <td>{{ user.user_id }}</td>
+                <td>{{ user.user_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.last_ip }}</td>
+                <td>{{ user.reg_ip }}</td>
+                <td>{{ user.last_login }}</td>
+                <td><a href="ya.ru">{{ user.referral_code }}</a></td>
+                <td>{{ user.is_admin }}</td>
+                <td><button>X</button></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </content>
+{% endblock %}

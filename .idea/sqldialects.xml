@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/sql/users/add_user_plan.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/confirm_reg.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/delete_user.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/get_login_with_email.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/get_user_with_email.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/reg_code.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/register_user.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/update_account_settings.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/update_avatar.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/users/validate_code.sql" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MariaDB" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="file://$PROJECT_DIR$/sql/users/get_news.sql" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;@negative&quot;:&quot;1&quot;   }  } }}" />
+  </component>
+</project>

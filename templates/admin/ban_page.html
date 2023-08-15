@@ -1,0 +1,64 @@
+{% extends "admin_base.html" %}
+
+{% block meta %}
+<link rel="stylesheet" href='{{ url_for("static", filename="/styles/null.css") }}'>
+{% endblock %}
+
+{% block content %}
+    <h1>BAN FORM</h1>
+    <content>
+        <form id="ban-form">
+            <input required type="hidden" name="user_id" value="{{data.user_id}}"/>
+            <label>REASON:
+                <input required name="reason"/>
+            </label>
+            <label>DATE_TO:
+                <input required type="datetime-local" name="date_end"/>
+            </label>
+            <input type="submit" value="BAN!" />
+        </form>
+        <h3 id="msg"></h3>
+
+        <h1>BAN HISTORY</h1>
+
+        <table>
+            <tr><th>reason</th><th>date_start</th><th>date_end</th></tr>
+            {% for ban in data.ban_history %}
+            <tr>
+                <td>{{ ban.reason }}</td> <td>{{ ban.date_start }}</td> <td>{{ ban.date_end }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <script>
+            const form = document.getElementById('ban-form');
+            const msg = document.getElementById('msg');
+
+            form.addEventListener('submit', event => {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+                    const data = new URLSearchParams(formData);
+
+                    console.log(form)
+                    console.log(formData)
+                    console.log(data)
+
+                    fetch('/user_api/ban', {
+                            method: 'POST',
+                            body: data
+                        }
+                    ).then(res => res.json())
+                     .then(data => {
+                            console.log(data);
+                            msg.innerHTML = 'Успешно';
+                        })
+                     .catch(error => {
+                        console.log(error);
+                        msg.innerHTML = 'Ошибка!';
+                     });
+                }
+            )
+        </script>
+    </content>
+{% endblock %}
