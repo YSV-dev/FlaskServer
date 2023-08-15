@@ -1,11 +1,12 @@
-from classes.BD_connection import I_BD_con
+from classes.BD_connection import IDBCon
 
-class I_Page(object):
+
+class IPage(object):
     def __init__(self):
         self.bd_con = None
         self.html_file = None
 
-    def set_db_connection(bd_con: I_BD_con):
+    def set_db_connection(self, bd_con: IDBCon):
         self.bd_con = bd_con
 
     def set_html_file(self, path: str):
