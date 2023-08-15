@@ -1,0 +1,50 @@
+.statistics_container{
+	padding: 15px 25px;
+	max-width: 250px;
+	vertical-align: top;
+}
+
+.statistic_row{
+	vertical-align: top;
+}
+
+.log_container{
+	flex-grow: 1;
+	height: 100%;
+	border-left: 0.05em solid #cccccc;
+	background-color: rgb(39, 39, 39);
+	overflow-y: auto;
+	-webkit-box-shadow: 4px 4px 5px -3px rgba(34, 60, 80, 0.6) inset;
+	-moz-box-shadow: 4px 4px 5px -3px rgba(34, 60, 80, 0.6) inset;
+	box-shadow: 4px 4px 5px -3px rgba(34, 60, 80, 0.6) inset;
+}
+
+.log{
+	width: 100%;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+.log_element{
+	font-size: 12px;
+	vertical-align: top;
+	transition: all 0.5s;
+}
+
+.log_element:hover{
+	background: #383838;
+}
+
+.log_element td:first-child{
+	width: 1px;
+	padding-left: 10px;
+}
+
+.log_element td:last-child{
+	padding-right: 10px;
+}
+
+.log_element td:nth-child(2){
+	width: 125px;
+}
+

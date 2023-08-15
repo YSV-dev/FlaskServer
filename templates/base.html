@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href='{{ url_for("static", filename="/styles/null.css") }}'>
+        <link rel="stylesheet" href='{{ url_for("static", filename="/styles/style.css") }}'>
+        {% block meta %}{% endblock %}
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src='{{ url_for("static", filename="/js_scripts/jquery-3.6.0.min.js") }}'></script>
+        
+        <title>{{page_name}}</title>
+    </head>
+    <body>
+        <div class="main_container">
+            <div class="window">
+                <div class="header_container">
+                    <div class="header_text_container">
+                        <h6 class="header noselect" header="{{page_name}}">{{page_name}}</h6>
+                    </div>
+                </div>
+                <div class="window_content">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

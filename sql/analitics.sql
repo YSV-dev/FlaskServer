@@ -1,0 +1,2 @@
+SELECT someshit
+FROM dual
